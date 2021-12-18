@@ -5,17 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Name {
-public WebDriver driver;	
-@FindBy(id="ap_customer_name") WebElement Name;
+public class Password {
+public WebDriver driver;
+@FindBy(id="ap_password") WebElement Password;
 
-public void Name(WebDriver driver) {
+public void Password(WebDriver driver) {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
-	}
-
-	public void name() {
-	Name.sendKeys("Adnan");	
-	}
 	
+}
+
+public void EnterPassword() {
+Password.sendKeys("Abcd");	
+}
 }

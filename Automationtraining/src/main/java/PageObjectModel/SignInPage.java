@@ -9,16 +9,21 @@ import org.openqa.selenium.support.PageFactory;
 	public WebDriver driver;
 	@FindBy(name="email") WebElement Email;
 	@FindBy(id="continue") WebElement Continue;
+	@FindBy(xpath = "//*[contains(text(),'We cannot find an')]") WebElement error;
 	public SignInPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-	}
+}
 	
 	public void EmailFieldKeys() {
-		Email.sendKeys("Adnanamin0702@gmail.com");
+		Email.sendKeys("Adnan");
 }
 	public void ContinueButtonClick() {
 		Continue.click();
-	}
+}
 	
+	public String text() {
+		String errorof= error.getText();
+		return errorof;
+}
 }
